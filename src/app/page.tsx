@@ -1,17 +1,16 @@
-import { MaxWidthWrapper } from "@/components/contentWrappers";
+'use client'
+import Footer from "@/components/footer";
 import HomeContent from "@/components/home/home.page";
 import Navbar from "@/components/navbar";
-
+import { useState } from "react";
 
 export default function Home() {
+  const [isNavTriggered, setIsNavTriggered] = useState(false);
   return (
-    <main className="bg-gradient-to-br from-base2 to-black w-screen h-screen overflow-hidden">
-      <Navbar />
-
-      <MaxWidthWrapper>
-        <HomeContent />
-      </MaxWidthWrapper>
-      
+    <main className="h-screen">
+      <Navbar isNavTriggered={isNavTriggered} activePage={1} />
+      <HomeContent setIsNavTriggered={setIsNavTriggered} />
+      <Footer activePage={1} />
     </main>
   );
 }

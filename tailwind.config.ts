@@ -17,7 +17,12 @@ export default {
         accenttext: "#8b8c73",
         logobase: "#ee513f",
         logobase2: "#ee793f",
-
+      },
+      fontFamily: {
+        ysabeau: ['"Ysabeau SC"', 'sans-serif'],
+        ubuntu: ['Ubuntu', 'sans-serif'],
+        jost: ['Jost', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
     },
   },
