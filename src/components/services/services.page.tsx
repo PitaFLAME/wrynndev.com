@@ -22,7 +22,7 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
     return () => context.revert();
   }, [setIsNavTriggered]);
 
-  const vert_mountainImagePath = '/assets/services/mountain.jpg';
+  const vert_mountainImagePath = '/assets/services/mountain_v.jpg';
   const horz_mountainImagePath = '/assets/services/mountain.jpg';
 
   return (

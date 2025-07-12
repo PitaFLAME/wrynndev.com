@@ -22,7 +22,7 @@ const AboutContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch
     return () => context.revert();
   }, [setIsNavTriggered]);
 
-  const vert_mountainImagePath = '/assets/about/mountain.jpg';
+  const vert_mountainImagePath = '/assets/about/mountain_v.jpg';
   const horz_mountainImagePath = '/assets/about/mountain.jpg';
 
   return (

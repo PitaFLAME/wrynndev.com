@@ -55,7 +55,7 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
     }
   };
 
-  const vert_mountainImagePath = '/assets/contact/vision.jpg';
+  const vert_mountainImagePath = '/assets/contact/vision_v.jpg';
   const horz_mountainImagePath = '/assets/contact/vision.jpg';
 
   return (
@@ -63,15 +63,20 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
     <div className="relative overflow-x-hidden">
 
       {/* Mobile Version */}
-      <div className="relative flex md:hidden justify-center w-screen h-screen top-0 bg-[#e2e3e4]">
+      <div className="relative flex md:hidden justify-center w-screen h-screen top-0 bg-[#131415]">
         <Image 
           src={vert_mountainImagePath}
-          className="h-screen object-cover"
-          alt="a woman standing in front of a vast mountaintop"
-          width={4000}
-          height={6000}
+          className="w-screen h-screen object-cover"
+          alt="Leio Mclaren sitting on a cliffside, looking out to the sunrise"
+          width={2473}
+          height={4489}
           priority
         />
+
+        <div className="absolute flex items-center w-5/6 h-1/3 mt-[10vh]">
+          <h2 className="font-montserrat font-bold text-black text-4xl sm:text-5xl leading-tight">SHARE YOUR<br/>VISION</h2>
+        </div>
+
       </div>
 
 
@@ -80,10 +85,10 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
       <div className="relative hidden md:flex items-center justify-center w-screen h-screen top-0 bg-[#131415]">
         <Image
           src={horz_mountainImagePath}
-          className="h-screen w-screen object-cover scale-110"
-          alt="a lush valley beneath a breathtaking mountain ridge"
+          className="w-screen h-screen object-cover"
+          alt="Leio Mclaren sitting on a cliffside, looking out to the sunrise"
           width={4000}
-          height={5000}
+          height={4489}
           priority
         />
         
@@ -96,20 +101,20 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
 
       <div className="relative flex flex-col items-center w-full bg-[#131415] text-[#e2e3e4] z-10 py-[10vh]" ref={navTrigger}>
 
-        <div className="grid grid-cols-7">
-          <div className="grid grid-cols-4 col-span-4 w-full">
+        <div className="grid md:grid-cols-7 grid-cols-1 md:mt-0 mt-[5vh]">
+          <div className="md:grid md:grid-cols-4 md:col-span-4 w-full">
             <div />
-            <div className="flex flex-row gap-[5vw] col-span-3 w-full">
-              <p className="font-montserrat font-thin text-8xl">
+            <div className="flex md:flex-row flex-col gap-[5vw] col-span-3 w-full">
+              <p className="font-montserrat font-thin md:text-left text-center md:text-8xl text-5xl md:w-full w-screen">
                 LET&apos;S GET<br/>IN TOUCH
               </p>
-              <a className="flex flex-row ml-auto mt-auto mr-[2vw] cursor-pointer group" href="mailto:info@wrynndev.com">
+              <a className="md:flex hidden flex-row ml-auto mt-auto mr-[2vw] cursor-pointer group" href="mailto:info@wrynndev.com">
                 <Mails className="w-8 h-8 mr-2" />
                 <p className="group-hover:underline text-2xl">info@wrynndev.com</p>
               </a>
             </div>
-            <div className="w-full mt-2 bg-[#0f0f0d]/70"/>
-            <div className="flex flex-row mt-2 col-span-3">
+            <div className="md:block hidden w-full mt-2 bg-[#0f0f0d]/70"/>
+            <div className="md:flex hidden flex-row mt-2 md:col-span-3">
               
               <Image
                 src={'/assets/contact/ledger.jpg'}
@@ -119,7 +124,7 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
                 height={2504}
               />
             </div>
-            <div></div>
+            <div className="md:block hidden" />
 
           </div>
 
