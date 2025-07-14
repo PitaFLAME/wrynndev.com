@@ -79,10 +79,10 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
             improvements, and new ideas as they come. You focus on your business, we focus on keeping your digital presence sharp.</p>
         </div>
 
-        <div className="flex md:flex-row flex-col mt-[20vh]">
+        <div className="xl:flex xl:flex-row md:grid grid-cols-2 xl:gap-y-0 md:gap-y-[8vh] flex-col justify-center md:w-full mt-[20vh]">
 
-          <div className="md:w-[20vw] pb-[8vh] pt-[4vh] md:mb-0 mb-[4vh] mx-4 bg-gradient-to-br transition-all duration-200 from-[#111213] to-[#101112] border border-[#080808] hover:from-[#202224] hover:to-[#212325] hover:border-[#e2e3e4]">
-            <h3 className="font-montserrat mt-8 text-center text-3xl text-[#e2e3e4] cursor-default">COMPLETE TECHNICAL PACKAGE</h3>
+          <div className="xl:w-[20vw] pb-[8vh] pt-[4vh] md:mb-0 mb-[4vh] mx-4 bg-gradient-to-br transition-all duration-200 from-[#111213] to-[#101112] border border-[#080808] hover:from-[#202224] hover:to-[#212325] hover:border-[#e2e3e4]">
+            <h3 className="font-montserrat mt-8 px-4 text-center text-3xl text-[#e2e3e4] cursor-default">COMPLETE TECHNICAL PACKAGE</h3>
             <p className="text-center font-montserrat font-extralight text-xl text-[#e2e3e4]/70 mt-4">Anything you need</p>
             <div className="w-4/5 h-0.5 mx-auto mt-8 bg-[#e2e3e4]/20" />
             <ul className="font-jost text-center text-xl text-[#e2e3e4] px-12 mt-8 cursor-default">
@@ -95,8 +95,8 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
             </ul>
           </div>
           
-          <div className="md:w-[20vw] pb-[8vh] pt-[4vh] md:mb-0 mb-[4vh] mx-4 bg-gradient-to-br transition-all duration-200 from-[#111213] to-[#101112] border border-[#080808] hover:from-[#202224] hover:to-[#212325] hover:border-[#e2e3e4]">
-            <h3 className="font-montserrat mt-8 text-center text-3xl text-[#e2e3e4] cursor-default">SEO & CONTENT<br/>STRATEGY</h3>
+          <div className="xl:w-[20vw] pb-[8vh] pt-[4vh] md:mb-0 mb-[4vh] mx-4 bg-gradient-to-br transition-all duration-200 from-[#111213] to-[#101112] border border-[#080808] hover:from-[#202224] hover:to-[#212325] hover:border-[#e2e3e4]">
+            <h3 className="font-montserrat mt-8 px-4 text-center text-3xl text-[#e2e3e4] cursor-default">SEO & CONTENT<br/>STRATEGY</h3>
             <p className="text-center font-montserrat font-extralight text-xl text-[#e2e3e4]/70 mt-4">To help customers find you easier</p>
             <div className="w-4/5 h-0.5 mx-auto mt-8 bg-[#e2e3e4]/20" />
             <ul className="font-jost text-center text-xl text-[#e2e3e4] px-12 mt-8 cursor-default">
@@ -109,8 +109,8 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
             </ul>
           </div>
           
-          <div className="md:w-[20vw] pb-[8vh] pt-[4vh] md:mb-0 mb-[4vh] mx-4 bg-gradient-to-br transition-all duration-200 from-[#111213] to-[#101112] border border-[#080808] hover:from-[#202224] hover:to-[#212325] hover:border-[#e2e3e4]">
-            <h3 className="font-montserrat mt-8 text-center text-3xl text-[#e2e3e4] cursor-default">BRAND<br/>INTEGRATION & GROWTH</h3>
+          <div className="xl:w-[20vw] pb-[8vh] pt-[4vh] md:mb-0 mb-[4vh] mx-4 bg-gradient-to-br transition-all duration-200 from-[#111213] to-[#101112] border border-[#080808] hover:from-[#202224] hover:to-[#212325] hover:border-[#e2e3e4]">
+            <h3 className="font-montserrat mt-8 px-4 text-center text-3xl text-[#e2e3e4] cursor-default">BRAND<br/>INTEGRATION & GROWTH</h3>
             <p className="text-center font-montserrat font-extralight text-xl text-[#e2e3e4]/70 mt-4">To make your business shine</p>
             <div className="w-4/5 h-0.5 mx-auto mt-8 bg-[#e2e3e4]/20" />
             <ul className="font-jost text-center text-xl text-[#e2e3e4] px-12 mt-8 cursor-default">
@@ -123,8 +123,8 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
             </ul>
           </div>
           
-          <div className="md:w-[20vw] pb-[8vh] pt-[4vh] md:mb-0 mb-[4vh] mx-4 bg-gradient-to-br transition-all duration-200 from-[#111213] to-[#101112] border border-[#080808] hover:from-[#202224] hover:to-[#212325] hover:border-[#e2e3e4]">
-            <h3 className="font-montserrat mt-8 text-center text-3xl text-[#e2e3e4] cursor-default group">FULL ONGOING<br/>SUPPORT</h3>
+          <div className="xl:w-[20vw] pb-[8vh] pt-[4vh] md:mb-0 mb-[4vh] mx-4 bg-gradient-to-br transition-all duration-200 from-[#111213] to-[#101112] border border-[#080808] hover:from-[#202224] hover:to-[#212325] hover:border-[#e2e3e4]">
+            <h3 className="font-montserrat mt-8 px-4 text-center text-3xl text-[#e2e3e4] cursor-default group">FULL ONGOING<br/>SUPPORT</h3>
             <p className="text-center font-montserrat font-extralight text-xl text-[#e2e3e4]/70 mt-4">We keep it running smoothly</p>
             <div className="w-4/5 h-0.5 mx-auto mt-8 bg-[#e2e3e4]/20" />
             <ul className="font-jost text-center text-xl text-[#e2e3e4] px-12 mt-8 cursor-default">
@@ -159,16 +159,18 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
                   height={3348}
                 />
               </div>
-              <div className="relative flex md:justify-start justify-center md:pb-0 pb-[20vh]">
-                <p className="font-montserrat font-thin md:text-5xl text-2xl md:text-left text-center md:w-4/5 mt-12 leading-snug px-8">
+              <div className="relative flex flex-col md:justify-start justify-center md:pb-0 pb-[20vh]">
+                <p className="font-montserrat font-thin lg:text-4xl md:text-2xl text-2xl md:text-left text-center md:w-4/5 mt-12 leading-snug px-8">
                   Traditional web development can cost thousands upfront—money that many businesses don&apos;t have sitting around. &nbsp;
                   Our monthly model changes that completely. &nbsp;You get professional development, hosting, maintenance, and ongoing support without the financial stress. &nbsp;
                   Think of it like having your own developer team on retainer, but at a fraction of the cost. &nbsp;No huge upfront investment, 
                   no budget battles, just reliable monthly payments that work with your business finances.
                 </p>
-                <a className="absolute flex justify-center items-center border-2 border-white md:w-2/3 w-11/12 md:ml-[5vw] py-[2vh] bottom-[4vh] cursor-pointer transition-colors duration-100 hover:bg-[#e2e3e4]/10 active:bg-[#e2e3e4]/30" href="./contact">
-                  <p className="font-montserrat font-bold text-xl text-[#e2e3e4]">Get Started</p>
-                </a>
+                <div className="relative flex md:justify-start justify-center min-h-[120px] h-full mt-[4vh]">
+                  <a className="absolute flex justify-center items-center border-2 border-white md:w-2/3 w-11/12 md:ml-[5vw] py-[2vh] bottom-[4vh] cursor-pointer transition-colors duration-100 hover:bg-[#e2e3e4]/10 active:bg-[#e2e3e4]/30" href="./contact">
+                    <p className="font-montserrat font-bold text-xl text-[#e2e3e4]">Get Started</p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
