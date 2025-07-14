@@ -37,6 +37,8 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
           alt="a woman standing in front of a vast mountaintop"
           width={4000}
           height={6000}
+          placeholder="blur"
+          blurDataURL="/assets/landing/mountain_v_blur.jpg"
           priority
         />
 
@@ -56,6 +58,8 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
           alt="a lush valley beneath a breathtaking mountain ridge"
           width={5472}
           height={3648}
+          placeholder="blur"
+          blurDataURL="/assets/landing/mountain_blur.jpg"
           priority
         />
         

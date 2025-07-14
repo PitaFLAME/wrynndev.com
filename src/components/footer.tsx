@@ -7,7 +7,7 @@ const Footer = ({activePage, noContact}:{
 
   return (
     <footer className="flex justify-center items-end w-full h-[40vh] border-t-2 border-[#e2e3e4]">
-      <div className="grid grid-cols-2 h-3/4 w-2/3">
+      <div className="grid md:grid-cols-2 md:gap-0 gap-20 h-3/4 w-2/3">
         
         <div className="flex flex-col">
           <div className="flex flex-row items-center gap-4">
@@ -29,9 +29,9 @@ const Footer = ({activePage, noContact}:{
 
         { noContact ? <></> :
           <div className="flex flex-col">
-            <p className="font-montserrat font-bold text-[#e2e3e4] text-5xl">WANT TO WORK<br/>WITH US?</p>
-            <a className="w-1/4 mt-20 px-6 py-4 border-2 border-[#e2e3e4] hover:bg-[#e2e3e4]/10 active:bg-[#e2e3e4]/30 text-center cursor-pointer" href="./contact">
-              <p className="font-jost text-xl text-[#e2e3e4]">Get in touch</p>
+            <p className="font-montserrat font-bold text-[#e2e3e4] md:text-5xl text-3xl">WANT TO WORK<br/>WITH US?</p>
+            <a className="md:w-1/4 w-2/3 md:mt-20 mt-8 md:mb-0 mb-12 md:px-6 px-4 md:py-4 py-2 border-2 border-[#e2e3e4] hover:bg-[#e2e3e4]/10 active:bg-[#e2e3e4]/30 text-center cursor-pointer" href="./contact">
+              <p className="font-jost md:text-xl text-lg text-[#e2e3e4]">Get in touch</p>
             </a>
           </div>
         }

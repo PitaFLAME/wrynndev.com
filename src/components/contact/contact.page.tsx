@@ -70,6 +70,8 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
           alt="Leio Mclaren sitting on a cliffside, looking out to the sunrise"
           width={2473}
           height={4489}
+          placeholder="blur"
+          blurDataURL="/assets/contact/vision_v_blur.jpg"
           priority
         />
 
@@ -89,6 +91,8 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
           alt="Leio Mclaren sitting on a cliffside, looking out to the sunrise"
           width={4000}
           height={4489}
+          placeholder="blur"
+          blurDataURL="/assets/contact/vision_blur.jpg"
           priority
         />
         
