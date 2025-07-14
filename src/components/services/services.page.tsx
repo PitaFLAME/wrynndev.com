@@ -70,9 +70,9 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
       </div>
 
 
-      <div className="relative flex flex-col items-center w-full bg-[#131415] z-10 py-[20vh]" ref={navTrigger}>
+      <div className="relative flex flex-col items-center w-full bg-[#131415] text-[#e2e3e4] z-10 py-[20vh]" ref={navTrigger}>
 
-        <div className="flex flex-col md:w-1/2 w-11/12 h-1/2 font-montserrat text-center text-[#e2e3e4]">
+        <div className="flex flex-col md:w-1/2 w-11/12 h-1/2 font-montserrat text-center">
           <h2 className="w-full font-bold md:text-[2.2rem] text-xl leading-10">PARTNERSHIP<span className="md:inline hidden">, </span><br className="md:hidden" />NOT JUST A PRODUCT</h2>
           <p className="w-full md:text-4xl text-2xl md:leading-[1.2] font-light pt-10">Most web developers build your site, hand you the keys, and disappear. We do things differently. 
             Your business changes, your market evolves, and your website should keep up. That&apos;s why we work with you month after month—handling updates, 

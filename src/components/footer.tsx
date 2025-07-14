@@ -6,7 +6,7 @@ const Footer = ({activePage, noContact}:{
 }) => {
 
   return (
-    <footer className="flex justify-center items-end w-full h-[40vh] border-t-2 border-[#e2e3e4]">
+    <footer className="flex justify-center items-end w-full h-[40vh] bg-black border-t-2 border-[#e2e3e4] text-[#e2e3e4]">
       <div className="grid md:grid-cols-2 md:gap-0 gap-20 h-3/4 w-2/3">
         
         <div className="flex flex-col">

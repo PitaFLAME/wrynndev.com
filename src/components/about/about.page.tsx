@@ -70,7 +70,7 @@ const AboutContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch
       </div>
 
 
-      <div className="relative flex flex-col items-center w-full bg-[#131415] z-10 py-[20vh]" ref={navTrigger}>
+      <div className="relative flex flex-col items-center w-full bg-[#131415] text-[#e2e3e4] z-10 py-[20vh]" ref={navTrigger}>
 
         <div className="w-4/5">
           <h3 className="font-ysabeau md:text-6xl text-4xl text-center">We Are WrynnDev</h3>

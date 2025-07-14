@@ -70,7 +70,7 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
       </div>
 
 
-      <div className="relative flex flex-col items-center w-full bg-[#131415] z-10 md:py-[20vh] py-[16vh]" ref={navTrigger}>
+      <div className="relative flex flex-col items-center w-full bg-[#131415] text-[#e2e3e4] z-10 md:py-[20vh] py-[16vh]" ref={navTrigger}>
 
         <svg className="absolute -z-10 opacity-20 md:-my-[320px] md:scale-y-75 -mt-[60px] md:scale-x-100 scale-x-150"
           viewBox="0 0 470.44 190.91">
