@@ -3,6 +3,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { IMAGE_PATHS } from '@/app/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,9 +23,6 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
     return () => context.revert();
   }, [setIsNavTriggered]);
 
-  const vert_mountainImagePath = '/assets/landing/mountain_v.png';
-  const horz_mountainImagePath = '/assets/landing/mountain.png';
-
   return (
 
     <div className="relative overflow-x-hidden">
@@ -32,13 +30,13 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
       {/* Mobile Version */}
       <div className="relative flex md:hidden justify-center items-center w-screen h-screen top-0 bg-[#e2e3e4]">
         <Image 
-          src={vert_mountainImagePath}
+          src={IMAGE_PATHS.home.vertMountain}
           className="h-screen object-cover"
           alt="a woman standing in front of a vast mountaintop"
           width={4000}
           height={6000}
           placeholder="blur"
-          blurDataURL="/assets/landing/mountain_v_blur.jpg"
+          blurDataURL={IMAGE_PATHS.home.vertMountainBlur}
           priority
         />
 
@@ -53,13 +51,13 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
       {/* Desktop Version */}
       <div className="relative hidden md:flex items-center justify-center w-screen h-screen top-0 bg-[#131415]">
         <Image
-          src={horz_mountainImagePath}
+          src={IMAGE_PATHS.home.horzMountain}
           className="h-screen w-screen object-cover scale-110"
           alt="a lush valley beneath a breathtaking mountain ridge"
           width={5472}
           height={3648}
           placeholder="blur"
-          blurDataURL="/assets/landing/mountain_blur.jpg"
+          blurDataURL={IMAGE_PATHS.home.horzMountainBlur}
           priority
         />
         
@@ -107,7 +105,7 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
         <div className="grid md:grid-cols-2 w-full md:gap-y-64 gap-y-[10vh] md:mt-20 mt-[20vh]">
           <div className="w-full md:pr-4 md:scale-100 scale-125 order-1">
             <Image
-              src={'/assets/landing/samir.jpg'}
+              src={IMAGE_PATHS.home.samir}
               className="md:h-full w-full object-cover"
               alt="A photo of Samir Venegas, holding a walking stick on a hiking trail"
               width={1993}
@@ -141,7 +139,7 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
 
           <div className="w-full md:pl-4 md:scale-100 scale-125 md:order-4 order-3">
             <Image
-            src={'/assets/landing/sand.jpg'}
+            src={IMAGE_PATHS.home.sand}
             className="w-full object-cover"
             alt=""
             width={1993}
@@ -151,7 +149,7 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
 
           <div className="w-full md:pr-4 md:scale-100 scale-125 order-5">
             <Image
-            src={'/assets/landing/blackbird.jpg'}
+            src={IMAGE_PATHS.home.blackbird}
             className="w-full object-cover"
             alt=""
             width={1993}

@@ -3,6 +3,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { IMAGE_PATHS } from '@/app/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,9 +23,6 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
     return () => context.revert();
   }, [setIsNavTriggered]);
 
-  const vert_mountainImagePath = '/assets/services/mountain_v.jpg';
-  const horz_mountainImagePath = '/assets/services/mountain.jpg';
-
   return (
 
     <div className="relative overflow-x-hidden">
@@ -32,13 +30,13 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
       {/* Mobile Version */}
       <div className="relative flex md:hidden justify-center items-center w-screen h-screen top-0 bg-[#e2e3e4]">
         <Image 
-          src={vert_mountainImagePath}
+          src={IMAGE_PATHS.services.vertMountain}
           className="h-screen object-cover"
           alt="a woman standing in front of a vast mountaintop"
           width={1984}
           height={2963}
           placeholder="blur"
-          blurDataURL="/assets/services/mountain_v_blur.jpg"
+          blurDataURL={IMAGE_PATHS.services.vertMountainBlur}
           priority
         />
 
@@ -53,13 +51,13 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
       {/* Desktop Version */}
       <div className="relative hidden md:flex items-center justify-center w-screen h-screen top-0 bg-[#131415]">
         <Image
-          src={horz_mountainImagePath}
+          src={IMAGE_PATHS.services.horzMountain}
           className="h-screen w-screen object-cover scale-110"
           alt="a lush valley beneath a breathtaking mountain ridge"
           width={4608}
           height={2963}
           placeholder="blur"
-          blurDataURL="/assets/services/mountain_blur.jpg"
+          blurDataURL={IMAGE_PATHS.services.horzMountainBlur}
           priority
         />
         
@@ -142,7 +140,7 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
         <div className="mt-[12vh] md:py-[12vh] md:pb-0 pb-[12vh] bg-[#101112]">
           <div>
             <Image
-              src='/assets/services/stepping_v.jpg'
+              src={IMAGE_PATHS.services.steppingVert}
               className="md:hidden block w-screen h-screen object-cover"
               alt="a silhouette of a person stepping off of a mountain peak"
               width={5184}
@@ -152,7 +150,7 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
             <div className="md:grid md:grid-cols-2 mt-[8vh]">
               <div className="">
                 <Image
-                  src='/assets/services/stepping.jpg'
+                  src={IMAGE_PATHS.services.stepping}
                   className="md:block hidden w-screen h-screen object-cover"
                   alt="a silhouette of a person stepping off of a mountain peak"
                   width={5184}

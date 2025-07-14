@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Mails } from "lucide-react";
 import emailjs from '@emailjs/browser';
+import { IMAGE_PATHS } from '@/app/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,9 +56,6 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
     }
   };
 
-  const vert_mountainImagePath = '/assets/contact/vision_v.jpg';
-  const horz_mountainImagePath = '/assets/contact/vision.jpg';
-
   return (
 
     <div className="relative overflow-x-hidden">
@@ -65,13 +63,13 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
       {/* Mobile Version */}
       <div className="relative flex md:hidden justify-center w-screen h-screen top-0 bg-[#131415]">
         <Image 
-          src={vert_mountainImagePath}
+          src={IMAGE_PATHS.contact.vertMountain}
           className="w-screen h-screen object-cover"
           alt="Leio Mclaren sitting on a cliffside, looking out to the sunrise"
           width={2473}
           height={4489}
           placeholder="blur"
-          blurDataURL="/assets/contact/vision_v_blur.jpg"
+          blurDataURL={IMAGE_PATHS.contact.vertMountainBlur}
           priority
         />
 
@@ -86,13 +84,13 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
       {/* Desktop Version */}
       <div className="relative hidden md:flex items-center justify-center w-screen h-screen top-0 bg-[#131415]">
         <Image
-          src={horz_mountainImagePath}
+          src={IMAGE_PATHS.contact.horzMountain}
           className="w-screen h-screen object-cover"
           alt="Leio Mclaren sitting on a cliffside, looking out to the sunrise"
           width={4000}
           height={4489}
           placeholder="blur"
-          blurDataURL="/assets/contact/vision_blur.jpg"
+          blurDataURL={IMAGE_PATHS.contact.horzMountainBlur}
           priority
         />
         
@@ -121,7 +119,7 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
             <div className="md:flex hidden flex-row mt-2 md:col-span-3">
               
               <Image
-                src={'/assets/contact/ledger.jpg'}
+                src={IMAGE_PATHS.contact.ledger}
                 className="object-cover"
                 alt="a lush valley beneath a breathtaking mountain ridge"
                 width={5110}

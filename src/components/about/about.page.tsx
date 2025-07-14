@@ -3,6 +3,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { IMAGE_PATHS } from '@/app/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,9 +23,6 @@ const AboutContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch
     return () => context.revert();
   }, [setIsNavTriggered]);
 
-  const vert_mountainImagePath = '/assets/about/mountain_v.jpg';
-  const horz_mountainImagePath = '/assets/about/mountain.jpg';
-
   return (
 
     <div className="relative overflow-x-hidden">
@@ -32,13 +30,13 @@ const AboutContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch
       {/* Mobile Version */}
       <div className="relative flex md:hidden items-center justify-center w-screen h-screen top-0 bg-[#e2e3e4]">
         <Image 
-          src={vert_mountainImagePath}
+          src={IMAGE_PATHS.about.vertMountain}
           className="h-screen object-cover"
           alt="a woman standing in front of a vast mountaintop"
           width={4000}
           height={6000}
           placeholder="blur"
-          blurDataURL="/assets/about/mountain_v_blur.jpg"
+          blurDataURL={IMAGE_PATHS.about.vertMountainBlur}
           priority
         />
 
@@ -53,13 +51,13 @@ const AboutContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch
       {/* Desktop Version */}
       <div className="relative hidden md:flex items-center justify-center w-screen h-screen top-0 bg-[#131415]">
         <Image
-          src={horz_mountainImagePath}
+          src={IMAGE_PATHS.about.horzMountain}
           className="h-screen w-screen object-cover scale-110"
           alt="a lush valley beneath a breathtaking mountain ridge"
           width={4608}
           height={2963}
           placeholder="blur"
-          blurDataURL="/assets/about/mountain_blur.jpg"
+          blurDataURL={IMAGE_PATHS.about.horzMountainBlur}
           priority
         />
         
