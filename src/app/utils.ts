@@ -1,8 +1,8 @@
 export const IMAGE_PATHS = {
   home: {
-    vertMountain: '/assets/landing/mountain_night.png',
+    vertMountain: '/assets/landing/mountain_v.png',
     vertMountainBlur: '/assets/landing/mountain_v_blur.png',
-    horzMountain: '/assets/landing/mountain2_day.png',
+    horzMountain: '/assets/landing/mountain.png',
     horzMountainBlur: '/assets/landing/mountain_blur.jpg',
     samir: '/assets/landing/samir.jpg',
     sand: '/assets/landing/sand.jpg',
