@@ -19,7 +19,7 @@ export default {
         logobase2: "#ee793f",
       },
       fontFamily: {
-        ysabeau: ['"var(--font-ysabeau)"', 'sans-serif'],
+        ysabeau: ['var(--font-ysabeau)', 'sans-serif'],
         ubuntu: ['var(--font-ubuntu)', 'sans-serif'],
         jost: ['var(--font-jost)', 'sans-serif'],
         montserrat: ['var(--font-montserrat)', 'sans-serif'],

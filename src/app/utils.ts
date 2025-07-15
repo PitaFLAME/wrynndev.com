@@ -1,37 +1,5 @@
 import { useState, useEffect } from "react";
 
-import { Montserrat, Jost, Ubuntu, Ysabeau_SC } from 'next/font/google'
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _montserrat = Montserrat({ 
-  subsets: ['latin'],
-  weight: ['300', '400', '700'],
-  variable: '--font-montserrat'
-})
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _jost = Jost({ 
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-jost'
-})
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _ubuntu = Ubuntu({ 
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-ubuntu'
-})
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _ysabeau = Ysabeau_SC({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-ysabeau'
-})
-
-
-
 
 
 const IMAGE_PATHS = {
