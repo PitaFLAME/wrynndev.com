@@ -116,7 +116,7 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
           <div className="w-full md:pl-4 md:scale-100 scale-125 md:order-4 order-3">
             <Image
             src={useImagePath('home', 'sand')}
-            className="w-full object-cover"
+            className="md:h-full w-full object-cover"
             alt=""
             width={1993}
             height={2657} />
@@ -126,7 +126,7 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
           <div className="w-full md:pr-4 md:scale-100 scale-125 order-5">
             <Image
             src={useImagePath('home', 'blackbird')}
-            className="w-full object-cover"
+            className="md:h-full w-full object-cover"
             alt=""
             width={1993}
             height={2657}></Image>
