@@ -86,7 +86,7 @@ const Navbar = ({ isNavTriggered, activePage } : {
       {/* Side Menu */}
       <div className={`md:hidden flex flex-col ${isMenuActive ? '' : '-translate-x-[100%]'} fixed h-screen w-2/3 border-r-4 border-[#dfe0e1] bg-gradient-to-br from-[#e2e3e4] to-[#e5e6e7] z-50 transition-all ease-out duration-150`}>
         
-        <a className="w-1/3 ml-[10%] mt-[5vh]" href="./">
+        <a className="w-1/3 ml-[10%] mt-[5vh]" href="./" aria-label="WrynnDev Home" >
           <svg className="fill-[#131415]" viewBox="0 0 176.23 176.23">
             <path d="M88.85,83.71A367.12,367.12,0,0,1,68.48,41.46,275.64,275.64,0,0,0,78.74,72.25c20.34,50.94,52.31,88.59,79.72,97.54C135.13,151.55,109.92,121.23,88.85,83.71Z"/>
             <path d="M132.86,176.23c-21.75-30.42-46.8-51.09-67.94-56.42C85.78,129.91,109.88,149.68,132.86,176.23Z"/>
