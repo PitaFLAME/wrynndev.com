@@ -85,7 +85,8 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
               className="md:h-full w-full object-cover"
               alt="A photo of Samir Venegas, holding a walking stick on a hiking trail"
               width={1993}
-              height={2657} />
+              height={2657} 
+              loading="lazy" />
           </div>
 
 
@@ -119,7 +120,8 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
             className="md:h-full w-full object-cover"
             alt=""
             width={1993}
-            height={2657} />
+            height={2657} 
+            loading="lazy" />
           </div>
 
 
@@ -129,7 +131,8 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
             className="md:h-full w-full object-cover"
             alt=""
             width={1993}
-            height={2657}></Image>
+            height={2657} 
+            loading="lazy" />
           </div>
 
 
