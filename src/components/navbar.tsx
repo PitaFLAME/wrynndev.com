@@ -22,7 +22,7 @@ const Navbar = ({ isNavTriggered, activePage } : {
           ${isNavTriggered ? "bg-gradient-to-br from-[#121314]/95 to-[#101112]/95 backdrop-blur-lg" : 'bg-gradient-to-b from-[#131415]/50 to-transparent'}`}
       >
         <nav className="flex flex-row w-full h-full max-w-[1620px] px-[2vw]">
-          <a className="flex flex-row cursor-pointer" href="./">
+          <a className="flex flex-row cursor-pointer" href="./" data-name="WrynnDev Home" >
             <div className="grid grid-cols-1 h-full md:w-[4.5rem] w-12">
               
               {/* Color Logo */}
@@ -75,8 +75,8 @@ const Navbar = ({ isNavTriggered, activePage } : {
           </ul>
           <button className="md:hidden flex ml-auto my-auto" onClick={ isMenuActive ? () => setIsMenuActive(false) : () => setIsMenuActive(true) }>
             { isMenuActive ? 
-              <X className={`w-9 h-9 ${isNavTriggered ? 'text-[#e2e3e4]' : 'text-[#131415]'}`} /> :
-              <Menu className={`w-9 h-9 ${isNavTriggered ? 'text-[#e2e3e4]' : 'text-[#131415]'}`} />
+              <X className={`w-9 h-9 ${isNavTriggered ? 'text-[#e2e3e4]' : 'text-[#131415]'}`} name="Close Menu" /> :
+              <Menu className={`w-9 h-9 ${isNavTriggered ? 'text-[#e2e3e4]' : 'text-[#131415]'}`} name="Menu" />
             }
           </button>
 
