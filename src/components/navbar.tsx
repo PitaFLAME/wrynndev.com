@@ -22,7 +22,7 @@ const Navbar = ({ isNavTriggered, activePage } : {
           ${isNavTriggered ? "bg-gradient-to-br from-[#121314]/95 to-[#101112]/95 backdrop-blur-lg" : 'bg-gradient-to-b from-[#131415]/50 to-transparent'}`}
       >
         <nav className="flex flex-row w-full h-full max-w-[1620px] px-[2vw]">
-          <a className="flex flex-row cursor-pointer" href="./" data-name="WrynnDev Home" >
+          <a className="flex flex-row cursor-pointer" href="./" aria-label="WrynnDev Home" >
             <div className="grid grid-cols-1 h-full md:w-[4.5rem] w-12">
               
               {/* Color Logo */}
@@ -73,10 +73,10 @@ const Navbar = ({ isNavTriggered, activePage } : {
             <li className={`cursor-pointer transition-colors duration-200 ${activePage == 3 ? 'underline' : 'hover:underline'}`}>{activePage != 3 ? <a href="./about">About</a> : <>About</>}</li>
             <li className={`cursor-pointer transition-colors duration-200 ${activePage == 4 ? 'underline' : 'hover:underline'}`}>{activePage != 4 ? <a href="./contact">Contact</a> : <>Contact</>}</li>
           </ul>
-          <button className="md:hidden flex ml-auto my-auto" onClick={ isMenuActive ? () => setIsMenuActive(false) : () => setIsMenuActive(true) }>
+          <button className="md:hidden flex ml-auto my-auto" onClick={ isMenuActive ? () => setIsMenuActive(false) : () => setIsMenuActive(true) } aria-label={ isMenuActive ? 'Close Menu' : 'Menu'} >
             { isMenuActive ? 
-              <X className={`w-9 h-9 ${isNavTriggered ? 'text-[#e2e3e4]' : 'text-[#131415]'}`} name="Close Menu" /> :
-              <Menu className={`w-9 h-9 ${isNavTriggered ? 'text-[#e2e3e4]' : 'text-[#131415]'}`} name="Menu" />
+              <X className={`w-9 h-9 ${isNavTriggered ? 'text-[#e2e3e4]' : 'text-[#131415]'}`} /> :
+              <Menu className={`w-9 h-9 ${isNavTriggered ? 'text-[#e2e3e4]' : 'text-[#131415]'}`} />
             }
           </button>
 
