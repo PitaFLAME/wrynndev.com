@@ -3,7 +3,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { IMAGE_PATHS } from '@/app/utils';
+import { useImagePath } from '@/app/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,44 +27,20 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
 
     <div className="relative overflow-x-hidden">
 
-      {/* Mobile Version */}
-      <div className="relative flex md:hidden justify-center items-center w-screen h-screen top-0 bg-[#e2e3e4]">
+      <div className="relative flex justify-center items-center w-screen h-screen top-0 bg-[#e2e3e4] dark:bg-[#131415]">
         <Image 
-          src={IMAGE_PATHS.home.vertMountain}
-          className="h-screen object-cover"
+          src={useImagePath('home', 'mountain')}
+          className="h-screen w-screen object-cover scale-110"
           alt="a woman standing in front of a vast mountaintop"
           width={4000}
           height={6000}
           placeholder="blur"
-          blurDataURL={IMAGE_PATHS.home.vertMountainBlur}
+          blurDataURL={useImagePath('home', 'mountainBlur')}
           priority
         />
-
         <div className="absolute flex justify-center items-center text-center w-5/6 h-1/3">
-          <h2 className="font-montserrat font-bold text-[#e2e3e4] text-4xl sm:text-5xl leading-tight">FORGE<br/>YOUR VISION</h2>
+          <h2 className="font-montserrat font-bold md:text-black text-[#e2e3e4] lg:text-[9rem] md:text-[5.5rem] text-4xl sm:text-5xl leading-tight">FORGE<br/>YOUR VISION</h2>
         </div>
-
-      </div>
-
-
-
-      {/* Desktop Version */}
-      <div className="relative hidden md:flex items-center justify-center w-screen h-screen top-0 bg-[#131415]">
-        <Image
-          src={IMAGE_PATHS.home.horzMountain}
-          className="h-screen w-screen object-cover scale-110"
-          alt="a lush valley beneath a breathtaking mountain ridge"
-          width={5472}
-          height={3648}
-          placeholder="blur"
-          blurDataURL={IMAGE_PATHS.home.horzMountainBlur}
-          priority
-        />
-        
-        <div className="absolute flex justify-center items-center w-1/2 h-1/2">
-          <h2 className="font-montserrat font-bold text-center text-black text-[10rem] leading-tight">FORGE<br/>YOUR VISION</h2>
-        </div>
-
       </div>
 
 
@@ -105,7 +81,7 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
         <div className="grid md:grid-cols-2 w-full md:gap-y-64 gap-y-[10vh] md:mt-20 mt-[20vh]">
           <div className="w-full md:pr-4 md:scale-100 scale-125 order-1">
             <Image
-              src={IMAGE_PATHS.home.samir}
+              src={useImagePath('home', 'samir')}
               className="md:h-full w-full object-cover"
               alt="A photo of Samir Venegas, holding a walking stick on a hiking trail"
               width={1993}
@@ -139,7 +115,7 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
 
           <div className="w-full md:pl-4 md:scale-100 scale-125 md:order-4 order-3">
             <Image
-            src={IMAGE_PATHS.home.sand}
+            src={useImagePath('home', 'sand')}
             className="w-full object-cover"
             alt=""
             width={1993}
@@ -149,7 +125,7 @@ const HomeContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch<
 
           <div className="w-full md:pr-4 md:scale-100 scale-125 order-5">
             <Image
-            src={IMAGE_PATHS.home.blackbird}
+            src={useImagePath('home', 'blackbird')}
             className="w-full object-cover"
             alt=""
             width={1993}

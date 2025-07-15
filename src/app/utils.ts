@@ -1,33 +1,97 @@
-export const IMAGE_PATHS = {
+import { useState, useEffect } from "react";
+
+const IMAGE_PATHS = {
   home: {
-    vertMountain: '/assets/landing/mountain_v.png',
-    vertMountainBlur: '/assets/landing/mountain_v_blur.png',
-    horzMountain: '/assets/landing/mountain.png',
-    horzMountainBlur: '/assets/landing/mountain_blur.jpg',
-    samir: '/assets/landing/samir.jpg',
-    sand: '/assets/landing/sand.jpg',
-    blackbird: '/assets/landing/blackbird.jpg',
+    mountain: {
+      mobile: '/assets/landing/mountain_v.png',
+      desktop: '/assets/landing/mountain.png',
+    },
+    mountainBlur: {
+      mobile: '/assets/landing/mountain_v_blur.png',
+      desktop: '/assets/landing/mountain_blur.jpg',
+    },
+    samir: {
+      mobile: '/assets/landing/samir_v.png',
+      desktop: '/assets/landing/samir.jpg',
+    },
+    sand: {
+      mobile: '/assets/landing/sand_v.png',
+      desktop: '/assets/landing/sand.jpg',
+    },
+    blackbird: {
+      mobile: '/assets/landing/blackbird_v.png',
+      desktop: '/assets/landing/blackbird.jpg',
+    },
   },
   services: {
-    vertMountain: '/assets/services/mountain_v.jpg',
-    vertMountainBlur: '/assets/services/mountain_v_blur.jpg',
-    horzMountain: '/assets/services/mountain.jpg',
-    horzMountainBlur: '/assets/services/mountain_blur.jpg',
-    stepping: '/assets/services/stepping.jpg',
-    steppingVert: '/assets/services/stepping_v.jpg',
-    steppingVertBlur: '/assets/services/stepping_v_blur.jpg',
+    mountain: {
+      mobile: '/assets/services/mountain_v.jpg',
+      desktop: '/assets/services/mountain.jpg',
+    },
+    mountainBlur: {
+      mobile: '/assets/services/mountain_v_blur.jpg',
+      desktop: '/assets/services/mountain_blur.jpg',
+    },
+    stepping: {
+      mobile: '/assets/services/stepping_v.jpg',
+      desktop: '/assets/services/stepping.jpg',
+    },
   },
   about: {
-    vertMountain: '/assets/about/mountain_v.jpg',
-    vertMountainBlur: '/assets/about/mountain_v_blur.jpg',
-    horzMountain: '/assets/about/mountain.jpg',
-    horzMountainBlur: '/assets/about/mountain_blur.jpg',
+    mountain: {
+      mobile: '/assets/about/mountain_v.jpg',
+      desktop: '/assets/about/mountain.jpg',
+    },
+    mountainBlur: {
+      mobile: '/assets/about/mountain_v_blur.jpg',
+      desktop: '/assets/about/mountain_blur.jpg',
+    },
   },
   contact: {
-    vertMountain: '/assets/contact/vision_v.jpg',
-    vertMountainBlur: '/assets/contact/vision_v_blur.jpg',
-    horzMountain: '/assets/contact/vision.jpg',
-    horzMountainBlur: '/assets/contact/vision_blur.jpg',
+    vision: {
+      mobile: '/assets/contact/vision_v.jpg',
+      desktop: '/assets/contact/vision.jpg',
+    },
+    visionBlur: {
+      mobile: '/assets/contact/vision_v_blur.jpg',
+      desktop: '/assets/contact/vision_blur.jpg',
+    },
     ledger: '/assets/contact/ledger.jpg',
   },
 };
+
+type ResponsiveImage = { mobile: string; desktop: string };
+
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < breakpoint);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [breakpoint]);
+  return isMobile;
+}
+
+export function useImagePath(
+  section: keyof typeof IMAGE_PATHS,
+  imageName: string
+) {
+  const isMobile = useIsMobile();
+  const sectionImages = IMAGE_PATHS[section];
+  if (!sectionImages) return '';
+  const image = sectionImages[imageName as keyof typeof sectionImages];
+  if (!image) return '';
+  if (typeof image === 'string') return image;
+  if (
+    typeof image === 'object' &&
+    image !== null &&
+    'mobile' in image &&
+    'desktop' in image
+  ) {
+    return isMobile ? (image as ResponsiveImage).mobile : (image as ResponsiveImage).desktop;
+  }
+  return '';
+}
+
+export { IMAGE_PATHS }

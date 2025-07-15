@@ -3,7 +3,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { IMAGE_PATHS } from '@/app/utils';
+import { useImagePath } from '@/app/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,20 +28,20 @@ const AboutContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch
     <div className="relative overflow-x-hidden">
 
       {/* Mobile Version */}
-      <div className="relative flex md:hidden items-center justify-center w-screen h-screen top-0 bg-[#e2e3e4]">
-        <Image 
-          src={IMAGE_PATHS.about.vertMountain}
-          className="h-screen object-cover"
+      <div className="relative flex justify-center items-center w-screen h-screen top-0 bg-[#e2e3e4] dark:bg-[#131415]">
+        <Image
+          src={useImagePath('about', 'mountain')}
+          className="h-screen w-screen object-cover scale-110"
           alt="a woman standing in front of a vast mountaintop"
           width={4000}
           height={6000}
           placeholder="blur"
-          blurDataURL={IMAGE_PATHS.about.vertMountainBlur}
+          blurDataURL={useImagePath('about', 'mountainBlur')}
           priority
         />
 
         <div className="absolute flex justify-center items-center text-center w-5/6 h-1/3">
-          <h2 className="font-montserrat font-bold text-black text-4xl sm:text-5xl leading-tight mb-auto">WE BELIEVE<br/>IN DRAGONS</h2>
+          <h2 className="font-montserrat font-bold text-black lg:text-[9rem] md:text-[5.5rem] text-4xl sm:text-5xl leading-tight">WE BELIEVE<br/>IN DRAGONS</h2>
         </div>
 
       </div>
@@ -49,25 +49,6 @@ const AboutContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispatch
 
 
       {/* Desktop Version */}
-      <div className="relative hidden md:flex items-center justify-center w-screen h-screen top-0 bg-[#131415]">
-        <Image
-          src={IMAGE_PATHS.about.horzMountain}
-          className="h-screen w-screen object-cover scale-110"
-          alt="a lush valley beneath a breathtaking mountain ridge"
-          width={4608}
-          height={2963}
-          placeholder="blur"
-          blurDataURL={IMAGE_PATHS.about.horzMountainBlur}
-          priority
-        />
-        
-        <div className="absolute flex justify-center items-center w-1/2 h-1/2">
-          <h2 className="font-montserrat font-bold text-center text-black text-[9rem] leading-tight">WE BELIEVE<br/>IN DRAGONS</h2>
-        </div>
-
-      </div>
-
-
       <div className="relative flex flex-col items-center w-full bg-[#131415] text-[#e2e3e4] z-10 py-[20vh]" ref={navTrigger}>
 
         <div className="w-4/5">

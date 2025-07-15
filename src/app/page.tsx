@@ -35,8 +35,8 @@ export default function Home() {
 
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <link rel="preload" as="image" href={IMAGE_PATHS.home.vertMountain} media="(max-width: 768px)" />
-      <link rel="preload" as="image" href={IMAGE_PATHS.home.horzMountain} media="(min-width: 769px)" />
+      <link rel="preload" as="image" href={IMAGE_PATHS.home.mountain.mobile} media="(max-width: 768px)" />
+      <link rel="preload" as="image" href={IMAGE_PATHS.home.mountain.desktop} media="(min-width: 769px)" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />

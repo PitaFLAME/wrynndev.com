@@ -3,7 +3,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { IMAGE_PATHS } from '@/app/utils';
+import { useImagePath } from '@/app/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,41 +28,20 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
     <div className="relative overflow-x-hidden">
 
       {/* Mobile Version */}
-      <div className="relative flex md:hidden justify-center items-center w-screen h-screen top-0 bg-[#e2e3e4]">
-        <Image 
-          src={IMAGE_PATHS.services.vertMountain}
-          className="h-screen object-cover"
+      <div className="relative flex justify-center items-center w-screen h-screen top-0 bg-[#e2e3e4] dark:bg-[#131415]">
+        <Image
+          src={useImagePath('services', 'mountain')}
+          className="h-screen w-screen object-cover scale-110"
           alt="a woman standing in front of a vast mountaintop"
           width={1984}
           height={2963}
           placeholder="blur"
-          blurDataURL={IMAGE_PATHS.services.vertMountainBlur}
+          blurDataURL={useImagePath('services', 'mountainBlur')}
           priority
         />
 
         <div className="absolute flex justify-center items-center text-center w-5/6 h-1/3">
-          <h2 className="font-montserrat font-bold text-black text-4xl sm:text-5xl leading-tight mb-auto">YOUR JOURNEY<br/>STARTS HERE</h2>
-        </div>
-
-      </div>
-
-
-
-      {/* Desktop Version */}
-      <div className="relative hidden md:flex items-center justify-center w-screen h-screen top-0 bg-[#131415]">
-        <Image
-          src={IMAGE_PATHS.services.horzMountain}
-          className="h-screen w-screen object-cover scale-110"
-          alt="a lush valley beneath a breathtaking mountain ridge"
-          width={4608}
-          height={2963}
-          placeholder="blur"
-          blurDataURL={IMAGE_PATHS.services.horzMountainBlur}
-          priority
-        />
-        
-        <div className="absolute flex justify-center items-center w-1/2 h-1/2">
-          <h2 className="font-montserrat font-bold text-center text-black text-[9rem] leading-tight">YOUR JOURNEY<br/>STARTS HERE</h2>
+          <h2 className="font-montserrat font-bold text-black lg:text-[9rem] md:text-[5.5rem] text-4xl sm:text-5xl leading-tight">YOUR JOURNEY<br/>STARTS HERE</h2>
         </div>
 
       </div>
@@ -140,7 +119,7 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
         <div className="mt-[12vh] md:py-[12vh] md:pb-0 pb-[12vh] bg-[#101112]">
           <div>
             <Image
-              src={IMAGE_PATHS.services.steppingVert}
+              src={useImagePath('services', 'stepping')}
               className="md:hidden block w-screen h-screen object-cover"
               alt="a silhouette of a person stepping off of a mountain peak"
               width={5184}
@@ -150,7 +129,7 @@ const ServicesContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispa
             <div className="md:grid md:grid-cols-2 mt-[8vh]">
               <div className="">
                 <Image
-                  src={IMAGE_PATHS.services.stepping}
+                  src={useImagePath('services', 'stepping')}
                   className="md:block hidden w-screen h-screen object-cover"
                   alt="a silhouette of a person stepping off of a mountain peak"
                   width={5184}

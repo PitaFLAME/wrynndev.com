@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Mails } from "lucide-react";
 import emailjs from '@emailjs/browser';
-import { IMAGE_PATHS } from '@/app/utils';
+import { useImagePath } from '@/app/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,45 +60,25 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
 
     <div className="relative overflow-x-hidden">
 
-      {/* Mobile Version */}
-      <div className="relative flex md:hidden justify-center w-screen h-screen top-0 bg-[#131415]">
-        <Image 
-          src={IMAGE_PATHS.contact.vertMountain}
+
+      <div className="relative flex justify-center items-center w-screen h-screen top-0 bg-[#131415]">
+        <Image
+          src={useImagePath('contact', 'vision')}
           className="w-screen h-screen object-cover"
           alt="Leio Mclaren sitting on a cliffside, looking out to the sunrise"
           width={2473}
           height={4489}
           placeholder="blur"
-          blurDataURL={IMAGE_PATHS.contact.vertMountainBlur}
+          blurDataURL={useImagePath('contact', 'visionBlur')}
           priority
         />
 
-        <div className="absolute flex items-center w-5/6 h-1/3 mt-[10vh]">
-          <h2 className="font-montserrat font-bold text-black text-4xl sm:text-5xl leading-tight">SHARE YOUR<br/>VISION</h2>
+        <div className="absolute flex items-center md:justify-center w-5/6 h-1/3 mt-[10vh]">
+          <h2 className="font-montserrat font-bold md:text-center text-black lg:text-[9rem] md:text-[5.5rem] sm:text-5xl text-4xl leading-tight">SHARE YOUR<br/>VISION</h2>
         </div>
 
       </div>
 
-
-
-      {/* Desktop Version */}
-      <div className="relative hidden md:flex items-center justify-center w-screen h-screen top-0 bg-[#131415]">
-        <Image
-          src={IMAGE_PATHS.contact.horzMountain}
-          className="w-screen h-screen object-cover"
-          alt="Leio Mclaren sitting on a cliffside, looking out to the sunrise"
-          width={4000}
-          height={4489}
-          placeholder="blur"
-          blurDataURL={IMAGE_PATHS.contact.horzMountainBlur}
-          priority
-        />
-        
-        <div className="absolute flex justify-center items-center w-1/2 h-1/2">
-          <h2 className="font-montserrat font-bold text-center text-black text-[9rem] leading-tight">SHARE YOUR<br/>VISION WITH US</h2>
-        </div>
-
-      </div>
 
 
       <div className="relative flex flex-col items-center w-full bg-[#131415] text-[#e2e3e4] z-10 py-[10vh]" ref={navTrigger}>
@@ -119,7 +99,7 @@ const ContactContent = ({ setIsNavTriggered }: { setIsNavTriggered: React.Dispat
             <div className="md:flex hidden flex-row mt-2 md:col-span-3">
               
               <Image
-                src={IMAGE_PATHS.contact.ledger}
+                src={useImagePath('contact', 'ledger')}
                 className="object-cover"
                 alt="a lush valley beneath a breathtaking mountain ridge"
                 width={5110}
